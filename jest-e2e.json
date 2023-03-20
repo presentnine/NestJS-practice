@@ -1,0 +1,27 @@
+{
+  "moduleFileExtensions": ["js", "json", "ts"],
+  "rootDir": "./",
+  "moduleNameMapper": {
+    "^@utils/(.*)$": "<rootDir>/src/utils/$1",
+    "^@exception/(.*)$": "<rootDir>/src/exception/$1",
+    "^@converter/(.*)$": "<rootDir>/src/converter/$1",
+    "^@user/(.*)$": "<rootDir>/src/domain/user/$1",
+  },
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/*.ts"],
+  "coveragePathIgnorePatterns": [
+    "node_modules",
+    ".module.ts",
+    "<rootDir>/src/app/main.ts",
+    "test",
+    "k6"
+  ],
+  "coverageDirectory": "test/coverage/",
+  "verbose": true
+}
